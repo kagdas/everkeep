@@ -1,22 +1,25 @@
 // main.dart
-
 import 'package:flutter/material.dart';
-import 'home_page.dart';
+// ignore: unused_import
+import 'home_page.dart'; 
+import 'login_page.dart'; // LoginPage dosyasını dahil ediyoruz
 
 void main() {
-  runApp(EverkeepApp());
+  runApp(const EverkeepApp());
 }
 
 class EverkeepApp extends StatelessWidget {
+  const EverkeepApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Everkeep',
       theme: ThemeData(
-        primarySwatch:    Colors.purple,
+        primarySwatch: Colors.purple,
       ),
-      home: HomePage(),
+      home: const LoginPage(), // Başlangıç sayfasını LoginPage olarak değiştiriyoruz
     );
   }
 }
-
